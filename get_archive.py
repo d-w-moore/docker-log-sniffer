@@ -58,8 +58,10 @@ if opt_TAR_snoop_and_exit:
 
 member_for_output = None
 
+# Iterate through TAR content to find the path specified.
+# ( Quitting iteration when it's found, so not using the "for thing in iterable" syntax : )
 try:
-    while True:
+    while True: 
         tar_info = next(tar_iter)
         if v_opt: print(tar_info.path, file = sys.stderr)
         if args[1:] and tar_info.path == args[1]:
