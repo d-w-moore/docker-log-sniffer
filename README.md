@@ -6,6 +6,8 @@ Allows:
    - selecting a path of the tree to be output via [-o output_name]
    - optionally streaming the entire container's filesystem out into a [--permanent tar_file_by_name]
 
+Note. Works better with Python 3. Python 2 does not handle streaming out of the container as efficiently.
+
 ```
 $ docker run --name my_container ubuntu:18.04
     # dd if=/dev/urandom of=/abc.dat  bs=1k count=500
